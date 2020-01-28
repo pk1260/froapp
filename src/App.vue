@@ -1,18 +1,20 @@
 <template>
     <div id="app">
-      {{gundam}}
+        <Gunplas v-bind:gunplas="gunplas"/>
     </div>
 </template>
 
 <script>
+    import Gunplas from './components/Gunplas';
+
     export default {
         name: 'app',
         components: {
-
+            Gunplas
         },
       data() {
           return {
-            gundam: [{
+            gunplas: [{
               id: 1,
               title: "Msn-06 Sinanju",
               price: "60$",
@@ -23,7 +25,7 @@
             },{
               id: 3,
               title: "Msn-04 Sinanju",
-              price: "18$",
+              price: "18$"
             }]
 
         }
